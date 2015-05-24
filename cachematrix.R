@@ -7,14 +7,13 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         xinv <- NULL # the product of the inversion would be stored here
-      # A setter function, use this to set a matrix to object created by makeCacheMatrix function
-      # e.g makeCacheMatrix(testmatrix) # here we work on testmatrix
-      # makeCacheMatrix$set(testmatrix1) # here we work on testmatrix1
-      set <- function(y) {
+      set <- function(y) { # A setter function, use this to set a matrix to object created by makeCacheMatrix function
 	  x <<- y
 	  xinv <<- NULL # it also initialises xinv to null
       }
-
+      # e.g makeCacheMatrix(testmatrix) # here we work on testmatrix
+      # makeCacheMatrix$set(testmatrix1) # here we work on testmatrix1
+      
       get <- function() x # return the input matrix
       setInv <- function(inv) xinv <<- inv # set the inversed matrix
       getInv <- function() xinv # return the inversed matrix
