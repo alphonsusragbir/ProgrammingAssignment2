@@ -3,6 +3,8 @@
 ## It uses the <<- assignment operator so that
 ## there is a clear line of exclusivity between environments.
 
+## Cache mean of a Vector
+
 makeCacheMatrix <- function(x = matrix()) {
         xinv <- NULL # the product of the inversion would be stored here
       # A setter function, use this to set a matrix to object created by makeCacheMatrix function
@@ -28,6 +30,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	       getInv = getInv)
 }
 
+## Cache Inverse of Matrix
 
   cacheSolve <- function(x, ...) {
       m <- x$getInv() # get the inversed matrix from object x
